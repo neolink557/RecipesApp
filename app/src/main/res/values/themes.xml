@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.TestApp" parent="android:Theme.Material.Wallpaper.NoTitleBar">
+        <item name="android:navigationBarColor">@color/yellow</item>
+        <item name="android:windowActionBar">@color/yellow</item>
+        <item name="android:windowBackground">@color/yellow</item>
+    </style>
+</resources>
