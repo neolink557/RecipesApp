@@ -14,16 +14,13 @@ import androidx.lifecycle.ViewModel
 import com.example.testApp.ui.home.HomeViewModel
 import com.example.testApp.ui.navigation.AppNavigation
 import com.example.testApp.ui.navigation.Screens
-import com.example.testApp.ui.splash.SplashViewModel
 import com.example.testApp.ui.theme.TestAppTheme
-import com.example.testApp.ui.theme.Yellow
 import com.example.testApp.utils.SetStatusBarAndNavBar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val splashViewModel: SplashViewModel by viewModels()
     private val homeViewModel: HomeViewModel by viewModels()
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
@@ -47,7 +44,6 @@ class MainActivity : ComponentActivity() {
 
     private fun inflateDictionary(): Map<String, ViewModel> {
         val vmDictionary = mutableMapOf<String, ViewModel>()
-        vmDictionary[Screens.SplashScreen.route] = splashViewModel
         vmDictionary[Screens.HomeScreen.route] = homeViewModel
         return vmDictionary
     }

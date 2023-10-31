@@ -10,7 +10,6 @@ import androidx.navigation.compose.rememberNavController
 import com.example.testApp.ui.home.HomeScreen
 import com.example.testApp.ui.home.HomeViewModel
 import com.example.testApp.ui.splash.SplashScreen
-import com.example.testApp.ui.splash.SplashViewModel
 
 @RequiresApi(Build.VERSION_CODES.TIRAMISU)
 @Composable
@@ -19,8 +18,7 @@ fun AppNavigation(viewModels: Map<String, ViewModel>) {
     NavHost(navController = navController, startDestination = Screens.SplashScreen.route) {
         composable(Screens.SplashScreen.route) {
             SplashScreen(
-                navController = navController,
-                viewModels[Screens.SplashScreen.route] as SplashViewModel
+                navController = navController
             )
         }
         composable(Screens.HomeScreen.route) {
