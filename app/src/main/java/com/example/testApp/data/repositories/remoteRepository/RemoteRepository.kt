@@ -15,5 +15,6 @@ interface RemoteRepository {
         @Query("type") type:String = DEFAULT_DATA_TYPE,
         @Query("app_id") endPointAppId:String = ENDPOIND_APP_ID,
         @Query("app_key") apiKey:String = API_KEY,
+        @Query("random") random:Boolean = false,
     ) : Response<RecipesResponseModel>
 }
