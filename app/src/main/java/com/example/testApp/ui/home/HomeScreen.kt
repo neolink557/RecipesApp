@@ -191,7 +191,7 @@ fun HorizontalMainPager(pagerState: PagerState, recipes: RecipesResponseModel) {
 
         LaunchedEffect(key1 = pagerState) {
             launch {
-                delay(3000)
+                delay(6000)
                 with(pagerState) {
                     val target = currentPage + 1
 
